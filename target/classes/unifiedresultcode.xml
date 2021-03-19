@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 建议以以下规则设置统一结果编码 -->
+<!-- 预留0~100作为通用结果预留编码 -->
+<!-- 业务相关编码以12位为标准，前3位为开发方编号，中3位为模块编号，后3位为方法编号，末3位为状态编号 -->
+<!-- SuperW开发方的编号为1，其他团队请自定义开发方编号 -->
+<!-- 举个例子例如：SuperW开发放1(001) 安全模块1(001) 登录方法1(001) 帐号不存在1(001) -->
+<!-- 则安全模块登录方法的帐号不存在结果编码为1001001001 -->
+<!-- 开发方编号 -->
+<!-- 1 - SuperW -->
+<!-- 模块编号 -->
+<!-- 1 - 安全模块 -->
+<!-- 方法编号 -->
+<!--  -->
+<unifiedresultcodes>
+	<unifiedresultcode>
+		<code>0</code>
+		<info>fail</info>
+	</unifiedresultcode>
+	<unifiedresultcode>
+		<code>1</code>
+		<info>success</info>
+		<isExist>true</isExist>
+	</unifiedresultcode>
+	<unifiedresultcode>
+		<code>2</code>
+		<info>illegal argument</info>
+	</unifiedresultcode>
+	<unifiedresultcode>
+		<code>3</code>
+		<info>entity exist with the same name</info>
+	</unifiedresultcode>
+	<unifiedresultcode>
+		<code>4</code>
+		<info>can not kill myself</info>
+	</unifiedresultcode>
+	<unifiedresultcode>
+		<code>1001001002</code>
+		<info>incorrect password</info>
+	</unifiedresultcode>
+	<unifiedresultcode>
+		<code>1001002002</code>
+		<info>deliverynum error</info>
+	</unifiedresultcode>
+	<unifiedresultcode>
+		<code>1001003002</code>
+		<info>amount over</info>
+	</unifiedresultcode>
+</unifiedresultcodes>  

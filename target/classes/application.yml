@@ -1,0 +1,10 @@
+server:
+  tomcat:
+     basedir: "D:/Web/nginx/html/tmp"
+spring:
+  profiles:
+    active: dev
+
+files:
+   path: 'D://Web//nginx//html/project'
+   

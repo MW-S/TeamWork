@@ -1,0 +1,68 @@
+# 配置端口
+server:
+   port: 8081
+spring:
+#   上传文件总的最大值
+   servlet:
+      multipart:
+         max-request-size: 100MB
+         max-file-size: 100MB
+   redis:
+      host: 127.0.0.1
+      port: 6379
+      database: 0
+      password: root
+   profiles: test
+   devtools:
+      restart:
+         enabled: true #设置开启热部署
+         additional-paths: src/main/java #重启目录
+#配置环境
+         exclude: static/**
+#开启热部署
+   datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/team_work?serverTimezone=GMT%2B8&useSSL=false
+      username: team
+      password: team
+# 配置数据源
+      type: com.alibaba.druid.pool.DruidDataSource
+      hikari: #设置开启热部署
+         connection-test-query: SELECT 1 #重启目录
+         minimum-idle: 10
+         maximum-pool-size: 100
+         connection-timeout: 14400000
+# hikari
+      hibernate:
+         ddl-auto: none
+      properties:
+         hibernate:
+            enable_lazy_load_no_trans: true
+# hibernate
+jwt:
+   header: Authorization
+# properties
+   token-start-with: Bearer
+   base64-secret: ZmQ0ZGI5NjQ0MDQwY2I4MjMxY2Y3ZmI3MjdhN2ZmMjNhODViOTg1ZGE0NTBjMGM4NDA5NzYxMjdjOWMwYWRmZTBlZjlhNGY3ZTg4Y2U3YTE1ODVkZDU5Y2Y3OGYwZWE1NzUzNWQ2YjFjZDc0NGMxZWU2MmQ3MjY1NzJmNTE0MzI=
+   token-validity-in-seconds: 14400000
+#jwt
+mybatis:
+   configuration:
+# 令牌前缀
+      map-underscore-to-camel-case: true
+# 使用Base64对该令牌进行编码
+pagehelper:
+#(制定您的密钥)
+# 令牌过期时间 此处单位/毫秒
+   helperDialect: mysql
+   reasonable: true
+   supportMethodsArguments: true
+   params: count=countSql
+logging:
+   level:
+      net:
+         mw: debu
+# ----------------
+# Orphan comments:
+# ----------------
+# Was at begin of line:66 :#showSql

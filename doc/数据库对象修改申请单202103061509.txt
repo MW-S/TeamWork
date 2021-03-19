@@ -1,0 +1,88 @@
+drop table if exists project_task_map;
+drop table if exists project_user_map;
+drop table if exists project;
+drop table if exists task;
+drop table if exists reform;
+
+create table project(
+	id bigint(16) UNSIGNED not null AUTO_INCREMENT comment '项目编号',
+	name varchar(256) not null comment '项目名',
+	type  varchar(256) not null comment '项目类型',
+	descript text null comment '项目简述',
+	code  varchar(6) not null comment '项目邀请码',
+	user_id bigint(16) UNSIGNED not null  comment '创建人ID',
+	state tinyint(1) null default 0 comment'项目状态 1是完成  0是未完成',
+	`create_gtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	`update_gtm` datetime ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+	`is_deleted` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否删除',
+	`is_locked` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否冻结',
+	foreign key(user_id) references user(id) on delete cascade on update cascade,
+	primary key(id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+create table task(
+	id bigint(16) UNSIGNED not null AUTO_INCREMENT comment '任务编号',
+	name varchar(256) not null comment '任务名',
+	type  varchar(256) not null comment '任务类型',
+	descript text null comment '任务简述',
+	user_id bigint(16) UNSIGNED not null  comment '创建人ID',
+	state tinyint(2) null default 0 comment'任务状态 ：0是未开始 1是正在进行 2完成  ',
+	`create_gtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	`update_gtm` datetime ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+	`is_deleted` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否删除',
+	`is_locked` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否冻结',
+	foreign key(user_id) references user(id) on delete cascade on update cascade,
+	primary key(id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+create table project_task_map(
+	id bigint(16) UNSIGNED not null AUTO_INCREMENT comment '团队编号',
+	project_id bigint(16) UNSIGNED not null  comment '项目ID',
+	task_id bigint(16) UNSIGNED not null  comment '任务ID',
+	`create_gtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	`update_gtm` datetime ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+	`is_deleted` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否删除',
+	`is_locked` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否冻结',
+	foreign key(project_id) references project(id) on delete cascade on update cascade,
+	foreign key(task_id) references task(id) on delete cascade on update cascade,
+	primary key(id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+create table reform(
+	id bigint(16) UNSIGNED not null AUTO_INCREMENT comment '动态编号',
+	content varchar(256) not null comment '动态内容',
+	project_id bigint(16) UNSIGNED not null  comment '项目ID',
+	task_id bigint(16) UNSIGNED not null  comment '任务ID',
+	user_id bigint(16) UNSIGNED not null  comment '用户ID',
+	`create_gtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	`update_gtm` datetime ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+	`is_deleted` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否删除',
+	`is_locked` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否冻结',
+	foreign key(project_id) references project(id) on delete cascade on update cascade,
+	foreign key(task_id) references task(id) on delete cascade on update cascade,
+	foreign key(user_id) references user(id) on delete cascade on update cascade,
+	primary key(id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+create table project_user_map(
+	id bigint(16) UNSIGNED not null AUTO_INCREMENT comment '项目用户映射编号',
+	project_id bigint(16) UNSIGNED not null  comment '项目ID',
+	user_id bigint(16) UNSIGNED not null  comment '成员ID',
+	`create_gtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	`update_gtm` datetime ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+	`is_deleted` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否删除',
+	`is_locked` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否冻结',
+	foreign key(project_id) references project(id) on delete cascade on update cascade,
+	foreign key(user_id) references user(id) on delete cascade on update cascade,
+	primary key(id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+ALTER TABLE `project`
+	CHANGE COLUMN `state` `state` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '项目状态 1是完成  0是未完成' AFTER `user_id`;
+	
+ALTER TABLE `task`
+	CHANGE COLUMN `state` `state` TINYINT(2) NOT NULL DEFAULT '0' COMMENT '任务状态 ：0是未开始 1是正在进行 2完成  ' AFTER `user_id`;
+
+ALTER TABLE `user`
+	CHANGE COLUMN `state` `state` TINYINT(1) NOT NULL DEFAULT '1' COMMENT '账号状态 1是正常 0是禁用' AFTER `salt`;

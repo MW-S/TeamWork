@@ -1,0 +1,108 @@
+drop database if exists team_work;
+create database team_work charset utf8 collate utf8_general_ci;
+use team_work;
+
+create user 'team'@'%' identified by 'team';
+grant all on team_work.* to team@'%';
+
+DROP TABLE IF EXISTS userrolemap;
+DROP TABLE IF EXISTS rolepermissionmap;
+DROP TABLE IF EXISTS permissions;
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS role;
+DROP TABLE IF EXISTS actionpower;
+
+
+create table user(
+	id bigint(16) UNSIGNED not null AUTO_INCREMENT comment '用户编号',
+	avatar_url varchar(256) not null comment '头像',
+	name varchar(256) not null comment '用户名',
+	type int(1) not null default 0 comment '用户类型',
+	password text not null comment '密码',
+	gender tinyint(1) not null default 0 comment '性别：0:未知,1:女,2:男',
+	phone int(11) not null default 0 comment '手机号码',
+	session_key varchar(256) null comment '会话密钥',
+	salt varchar(64)  null comment'盐值',
+	state tinyint(1) null default 1 comment'账号状态 1是正常 0是禁用',
+	`create_gtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	`update_gtm` datetime ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+	`is_deleted` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否删除',
+	`is_locked` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否冻结',
+	primary key(id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+create table role(
+  id bigint(16) UNSIGNED not null AUTO_INCREMENT comment '角色编号',
+  name varchar(256) not null comment '角色名',
+  `create_gtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_gtm` datetime ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+  `is_deleted` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否删除',
+  `is_locked` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否冻结',
+
+  primary key(id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+create table permissions(
+  id bigint(16) UNSIGNED not null AUTO_INCREMENT comment '权限编号',
+  name varchar(256) not null comment '权限名',
+  parent bigint(16) UNSIGNED null default null comment '父级权限',
+  perms varchar(256) not null comment '权限标识',
+  `create_gtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_gtm` datetime ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+  `is_deleted` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否删除',
+  `is_locked` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否冻结',
+  index (parent),
+  FOREIGN KEY (parent) REFERENCES permissions(id) ON DELETE CASCADE ON UPDATE CASCADE,
+  primary key(id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+create table actionpower(
+  id bigint(16) UNSIGNED not null AUTO_INCREMENT comment 'action编号',
+  name varchar(256) not null comment 'action名',
+  perm varchar(256) not null comment '权限',
+  `create_gtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_gtm` datetime ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+  `is_deleted` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否删除',
+  `is_locked` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否冻结',
+  primary key(id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+create table userrolemap(
+  id bigint(16) UNSIGNED not null AUTO_INCREMENT comment '用户角色编号',
+  userid bigint(16) UNSIGNED not null comment '用户ID',
+  roleid bigint(16) UNSIGNED not null comment '角色ID',
+  	`create_gtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	`update_gtm` datetime ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+	`is_deleted` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否删除',
+	`is_locked` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否冻结',
+  index (userid),
+  index (roleid),
+  FOREIGN KEY (userid) REFERENCES user(id) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (roleid) REFERENCES role(id) ON DELETE CASCADE ON UPDATE CASCADE,
+  primary key(id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+create table rolepermissionmap(
+  id bigint(16) UNSIGNED not null AUTO_INCREMENT comment '编号',
+  roleid bigint(16) UNSIGNED not null comment '角色ID',
+  permissionid bigint(16) UNSIGNED not null comment '权限ID',
+  `create_gtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_gtm` datetime ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+  `is_deleted` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否删除',
+  `is_locked` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否冻结',
+  primary key(id),
+  index (roleid),
+  index (permissionid),
+  FOREIGN KEY (roleid) REFERENCES role(id) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (permissionid) REFERENCES permissions(id) ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+alter table `user`
+    add  column `account` varchar(256) charset utf8 collate utf8_general_ci not null comment '登录账号' after type;
+
+ALTER TABLE `user`
+	CHANGE COLUMN `avatar_url` `avatar_url` VARCHAR(256) NULL COMMENT '头像' COLLATE 'utf8_general_ci' AFTER `id`;
+ALTER TABLE `user`
+	CHANGE COLUMN `phone` `phone` bigint(11) not null default 0 comment '手机号码'  after `gender`;

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="99f5159d-39d1-4d75-8faf-a508e1118f19" name="默认更改列表" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ubuntu" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Teamwork" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\server\mavenLib" />
+        <option name="userSettingsFile" value="E:\server\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="#JAVA_HOME" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1pBspKE4aGno5RVpaUIhsSc2n0P" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="D:/JAVA_Eclipse/Eclipse/eclipse_new/eclipse_Workspace/ncov" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.4329897" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="net.mw.teamwork.service" />
+      <recent name="net.mw" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\server\Git\MyGit\202010\Teamwork\src\main\java\net\mw" />
+      <recent name="E:\server\Git\MyGit\202010\Teamwork\src\main\resources" />
+      <recent name="E:\server\Git\MyGit\202010\Teamwork\src\main\java\net\mw\system" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TeamWorkApplication">
+    <configuration name="UserDaoTest.addActionPowerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Teamwork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.UserDaoTest" />
+      <option name="METHOD_NAME" value="addActionPowerTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeamWorkApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Teamwork" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.mw.TeamWorkApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserDaoTest.addActionPowerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99f5159d-39d1-4d75-8faf-a508e1118f19" name="默认更改列表" comment="" />
+      <created>1614668006730</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614668006730</updated>
+      <workItem from="1614668020173" duration="5717000" />
+      <workItem from="1614686253003" duration="7432000" />
+      <workItem from="1614699833961" duration="2857000" />
+      <workItem from="1614748668828" duration="4425000" />
+      <workItem from="1614763195649" duration="7212000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="24" key="#Inspections" timestamp="1614672583301">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="24" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1614672583301" />
+    <state x="275" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614673618098">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1614673618098" />
+    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1614767937661">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1614767937661" />
+    <state x="305" y="44" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1614671020140">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="305" y="44" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1366.728@0.0.1366.728" timestamp="1614671020140" />
+    <state x="288" y="291" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1614669083983">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="288" y="291" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1614669083983" />
+    <state x="509" y="229" width="380" height="275" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1614690139390">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="509" y="229" width="380" height="275" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1614690139390" />
+    <state x="275" y="24" key="#项目结构" timestamp="1614671148750">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="24" key="#项目结构/0.0.1366.728@0.0.1366.728" timestamp="1614671148750" />
+    <state x="445" y="232" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1614672921228">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="445" y="232" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1614672921228" />
+    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1614760960222">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1614760960222" />
+    <state width="1322" height="68" key="GridCell.Tab.0.bottom" timestamp="1614779316584">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="68" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
+    <state width="1322" height="68" key="GridCell.Tab.0.center" timestamp="1614779316584">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="68" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
+    <state width="1322" height="68" key="GridCell.Tab.0.left" timestamp="1614779316584">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="68" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
+    <state width="1322" height="68" key="GridCell.Tab.0.right" timestamp="1614779316584">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="68" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
+    <state width="1322" height="68" key="GridCell.Tab.1.bottom" timestamp="1614779316584">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="68" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
+    <state width="1322" height="68" key="GridCell.Tab.1.center" timestamp="1614779316584">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="68" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
+    <state width="1322" height="68" key="GridCell.Tab.1.left" timestamp="1614779316584">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="68" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
+    <state width="1322" height="68" key="GridCell.Tab.1.right" timestamp="1614779316584">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="68" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
+    <state width="220" height="477" key="HiddenNamespacesPopup" timestamp="1614670190596">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1614670190596" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1614766126571">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1614766126571" />
+    <state x="393" y="190" key="com.intellij.ide.util.TipDialog" timestamp="1614763207399">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="393" y="190" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1614763207399" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1614702013967">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1614702013967" />
+  </component>
+</project>
