@@ -1,12 +1,6 @@
-# 配置端口
+﻿# 配置端口
 server:
    port: 8080
-#生成的证书名字
-#ssl:
-#  key-store: classpath:mwkingdragon-free-idcfengye-com-iis-0510173153.pfx
-#钥库密码
-# key-store-password: mwking
-#key-store-type: PKCS12
 spring:
    profiles: dev
 #   上传文件总的最大值

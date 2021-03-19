@@ -1,4 +1,4 @@
-package net.mw.system.utils;
+﻿package net.mw.system.utils;
 
 import java.security.SecureRandom;
 import java.util.Map;
@@ -19,8 +19,8 @@ import com.aliyuncs.profile.DefaultProfile;
  * @since 6.0.0
  */
 public class Registration {
-	private final static String accessKeyId="LTAI4FiJ2EP4oaScm4DSWX3D";//商家注册阿里短信平台后添加的accessKeyId
-	private final static String accessSecret="HXiYVWojeB56azNUNNJw5dFofo36ot";//商家注册阿里短信平台后添加的accessSecret
+	private final static String accessKeyId="";//商家注册阿里短信平台后添加的accessKeyId
+	private final static String accessSecret="";//商家注册阿里短信平台后添加的accessSecret
 	
 	public  static Map<String, Object> SendSms(String phoneNum) {
 		DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", accessKeyId,accessSecret);
