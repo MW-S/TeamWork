@@ -11,7 +11,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import io.netty.util.internal.ObjectUtil;
 import net.mw.system.pojo.po.UserPO;
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -60,15 +62,16 @@ public class ProjectServiceImpl implements ProjectService {
 	 * @see net.mw.teamwork.service.ProjectService#getList()
 	 */
 	@Override
-	public ResultMessage getList(PageRequest page, String token) {
+	public ResultMessage getList(PageRequest page,  UserPO user) {
 		logger.trace("进入getList方法");
     	ResultMessage rs = new ResultMessage();
 		try {
-			User user =(User) ((UsernamePasswordAuthenticationToken) jwtTokenUtils.getAuthentication(token)).getPrincipal();
-			UserPO userPo = userDao.getUserByAccount(user.getUsername());
+			if(!ObjectUtils.allNotNull(user)){
+				throw new IllegalArgumentException("登录用户不得为空！");
+			}
 			Map<String,Object> data = new HashMap<String,Object>();
 			PageHelper.startPage(page.getPageNumber(), page.getPageSize());
-			List<ProjectPO> projects = userPo.getType() == 1?dao.getProjectList():dao.getProjectByUserId(userPo.getId());
+			List<ProjectPO> projects = user.getType() == 1?dao.getProjectList():dao.getProjectByUserId(user.getId());
 			List<ProjectVO> vos = new ArrayList<>();
 			projects.forEach((item)->{
 				item.setUserName(userDao.getUserById(item.getUserId()).getName());
@@ -128,18 +131,19 @@ public class ProjectServiceImpl implements ProjectService {
 	 * @see net.mw.teamwork.service.ProjectService#add(net.mw.teamwork.pojo.po.ProjectPO)
 	 */
 	@Override
-	public ResultMessage add(ProjectPO po ,String token) {
+	public ResultMessage add(ProjectPO po ,UserPO user) {
 		logger.trace("进入add方法");
     	ResultMessage rs = new ResultMessage();
 		try {
-			User user =(User) ((UsernamePasswordAuthenticationToken) jwtTokenUtils.getAuthentication(token)).getPrincipal();
-			Long userId = userDao.getUserByAccount(user.getUsername()).getId();
+			if(!ObjectUtils.allNotNull(user)){
+				throw new IllegalArgumentException("登录用户不得为空！");
+			}
 			String code = null;
 			do{
 				code = RandomStringUtils.randomAlphanumeric(6);
 			}while (dao.ContinerCode(code) > 0);
 			po.setCode(code);
-			po.setUserId(userId);
+			po.setUserId(user.getId());
 			if(dao.save(po) > 0 ) {
 				rs.setCode(1L);
 				rs.setMsg("添加成功!");
@@ -164,12 +168,13 @@ public class ProjectServiceImpl implements ProjectService {
 	 * @see net.mw.teamwork.service.ProjectService#update(net.mw.teamwork.pojo.po.ProjectPO)
 	 */
 	@Override
-	public ResultMessage update(ProjectPO po, String token) {
+	public ResultMessage update(ProjectPO po, UserPO user) {
 		logger.trace("进入update方法");
     	ResultMessage rs = new ResultMessage();
 		try {
-			User user =(User) ((UsernamePasswordAuthenticationToken) jwtTokenUtils.getAuthentication(token)).getPrincipal();
-			Long userId = userDao.getUserByAccount(user.getUsername()).getId();
+			if(!ObjectUtils.allNotNull(user)){
+				throw new IllegalArgumentException("登录用户不得为空！");
+			}
 			ProjectPO lastPo =dao.getProjectById(po.getId());
 			lastPo.setName(po.getName());
 			lastPo.setType(po.getType());
@@ -227,13 +232,14 @@ public class ProjectServiceImpl implements ProjectService {
 	 * @see net.mw.teamwork.service.ProjectService#getMyProject()
 	 */
 	@Override
-	public ResultMessage getMyProject(String token) {
+	public ResultMessage getMyProject(UserPO user) {
 		logger.trace("进入getMyProject方法");
     	ResultMessage rs = new ResultMessage();
 		try {
-			User user =(User) ((UsernamePasswordAuthenticationToken) jwtTokenUtils.getAuthentication(token)).getPrincipal();
-			Long userId = userDao.getUserByAccount(user.getUsername()).getId();
-			List<ProjectPO> resPos = dao.getProjectByUserId(userId);
+			if(!ObjectUtils.allNotNull(user)){
+				throw new IllegalArgumentException("登录用户不得为空！");
+			}
+			List<ProjectPO> resPos = dao.getProjectByUserId(user.getId());
 			List<ProjectVO> resVos = new ArrayList<>();
 			resPos.forEach(item->{
 				ProjectVO vo = new ProjectVO();
@@ -263,14 +269,15 @@ public class ProjectServiceImpl implements ProjectService {
 	 * @see net.mw.teamwork.service.ProjectService#join(java.lang.String)
 	 */
 	@Override
-	public ResultMessage join(String code,String token) {
+	public ResultMessage join(String code, UserPO user) {
 		logger.trace("进入join方法");
     	ResultMessage rs = new ResultMessage();
 		try {
-			User user =(User) ((UsernamePasswordAuthenticationToken) jwtTokenUtils.getAuthentication(token)).getPrincipal();
-			Long userId = userDao.getUserByAccount(user.getUsername()).getId();
+			if(!ObjectUtils.allNotNull(user)){
+				throw new IllegalArgumentException("登录用户不得为空！");
+			}
 			ProjectPO projectPo = dao.getProjectByCode(code);
-			if(dao.joinProject(projectPo.getId(), userId) > 0 ) {
+			if(dao.joinProject(projectPo.getId(), user.getId()) > 0 ) {
 				rs.setCode(1L);
 				rs.setMsg("加入成功!");
 			}else {

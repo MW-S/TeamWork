@@ -3,12 +3,18 @@ package net.mw.system.init;
 import net.mw.system.annotation.CurrentUser;
 import net.mw.system.dao.UserDao;
 import net.mw.system.pojo.po.UserPO;
+import net.mw.system.utils.JwtTokenUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.MethodParameter;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
@@ -19,11 +25,16 @@ import org.springframework.web.method.support.ModelAndViewContainer;
  * @Author W_Messi
  * @CrateTime 2020-03-05 14:57:09
  */
-@Component
+@Configuration
 public class CurrentUserMethodArgumentResolver implements HandlerMethodArgumentResolver {
-	
+
+	public static final String LOGIN_TOKEN_KEY = "Authorization";
+
 	@Autowired
 	private UserDao userDao;
+
+	@Autowired
+	private JwtTokenUtils jwtTokenUtils;
 	
 	public CurrentUserMethodArgumentResolver() {
 		
@@ -44,16 +55,14 @@ public class CurrentUserMethodArgumentResolver implements HandlerMethodArgumentR
 	@Override
 	public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
                                   NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
-			SecurityContext context = SecurityContextHolder.getContext();
-			Authentication authentication = context.getAuthentication();
-	        UserPO subject=(UserPO) authentication.getPrincipal();
-	        UserPO currentUser=new UserPO();
-	       if (subject != null) {
-	    	   Long id=subject.getId();
-	    	   currentUser=userDao.getUserById(id);
-	    	   System.err.println(currentUser.toString());
-	    	   return currentUser;
-	        }
-	        return null;
+		String Authorization = webRequest.getHeader(LOGIN_TOKEN_KEY);
+		if (Authorization == null || Authorization.isEmpty()) {
+			return null;
+		}
+		String token = Authorization.split("Bearer ")[1];
+		User user =(User) ((UsernamePasswordAuthenticationToken) jwtTokenUtils.getAuthentication(token)).getPrincipal();
+		UserPO currentUser=new UserPO();
+		currentUser=userDao.getUserByAccount(user.getUsername());
+		return currentUser;
 	}
 }

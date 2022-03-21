@@ -2,6 +2,8 @@ package net.mw.teamwork.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import net.mw.system.annotation.CurrentUser;
+import net.mw.system.pojo.po.UserPO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,11 +41,11 @@ public class TaskController {
     
     
     @GetMapping(value = "/getList")
-    public ResultMessage getList(@RequestParam("page") int page,@RequestParam("size") int size
-			,HttpServletRequest request){
+    public ResultMessage getList(@RequestParam("page") int page, @RequestParam("size") int size
+			, @CurrentUser UserPO user){
 		logger.trace("进入getList方法");
 		PageRequest pageVo = new PageRequest(page, size);
-		ResultMessage rs=service.getList(pageVo, request.getHeader("Authorization").split("Bearer ")[1]);
+		ResultMessage rs=service.getList(pageVo, user);
 		logger.trace("退出getList方法");
 		return rs;
     }
@@ -75,10 +77,10 @@ public class TaskController {
     }
     
     @PostMapping(value = "/update")
-    public ResultMessage update(@RequestBody TaskVO vo,HttpServletRequest request){
+    public ResultMessage update(@RequestBody TaskVO vo,@CurrentUser UserPO user){
 		logger.trace("进入add方法");
 		TaskPO po = vo.voToPo(TaskPO.class);
-		ResultMessage rs=service.update(po, request.getHeader("Authorization").split("Bearer ")[1]);
+		ResultMessage rs=service.update(po, user);
 		logger.trace("退出add方法");
 		return rs;
     }

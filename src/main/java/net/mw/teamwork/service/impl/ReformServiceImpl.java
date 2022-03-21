@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import net.mw.system.pojo.po.UserPO;
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -133,13 +135,14 @@ public class ReformServiceImpl implements ReformService {
 	 * @see net.mw.teamwork.service.ReformService#add(net.mw.teamwork.pojo.po.ReformPO)
 	 */
 	@Override
-	public ResultMessage add(ReformPO po, String token) {
+	public ResultMessage add(ReformPO po, UserPO user) {
 		logger.trace("进入add方法");
     	ResultMessage rs = new ResultMessage();
 		try {
-			User user =(User) ((UsernamePasswordAuthenticationToken) jwtTokenUtils.getAuthentication(token)).getPrincipal();
-			Long userId = userDao.getUserByAccount(user.getUsername()).getId();
-			po.setUserId(userId);
+			if(!ObjectUtils.allNotNull(user)){
+				throw new IllegalArgumentException("登录用户不得为空！");
+			}
+			po.setUserId(user.getId());
 			if(dao.save(po) > 0 ) {
 				rs.setCode(1L);
 				rs.setMsg("添加成功!");
@@ -164,10 +167,13 @@ public class ReformServiceImpl implements ReformService {
 	 * @see net.mw.teamwork.service.ReformService#update(net.mw.teamwork.pojo.po.ReformPO)
 	 */
 	@Override
-	public ResultMessage update(ReformPO po, String token) {
+	public ResultMessage update(ReformPO po, UserPO user) {
 		logger.trace("进入update方法");
     	ResultMessage rs = new ResultMessage();
 		try {
+			if(!ObjectUtils.allNotNull(user)){
+				throw new IllegalArgumentException("登录用户不得为空！");
+			}
 			ReformPO lastPo =dao.getReformById(po.getId());
 			lastPo.setContent(po.getContent());
 			if(dao.update(lastPo) > 0 ) {

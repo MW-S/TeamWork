@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,15 +58,16 @@ public class TaskServiceImpl implements TaskService {
 	private ReformDao reformDao;
 	
 	@Override
-	public ResultMessage getList(PageRequest page, String token) {
+	public ResultMessage getList(PageRequest page, UserPO user) {
 		logger.trace("进入getList方法");
     	ResultMessage rs = new ResultMessage();
 		try {
-			User user =(User) ((UsernamePasswordAuthenticationToken) jwtTokenUtils.getAuthentication(token)).getPrincipal();
-			UserPO userPo = userDao.getUserByAccount(user.getUsername());
+			if(!ObjectUtils.allNotNull(user)){
+				throw new IllegalArgumentException("登录用户不得为空！");
+			}
 			Map<String,Object> data = new HashMap<String,Object>();
 			PageHelper.startPage(page.getPageNumber(), page.getPageSize());
-			List<TaskPO> pos = userPo.getType()==1?dao.getTaskList():dao.getTaskByUserId(userPo.getId());
+			List<TaskPO> pos = user.getType()==1?dao.getTaskList():dao.getTaskByUserId(user.getId());
 			List<TaskVO> vos = new ArrayList<>();
 			pos.forEach((item)->{
 				item.setUserName(userDao.getUserById(item.getUserId()).getName());
@@ -143,12 +145,13 @@ public class TaskServiceImpl implements TaskService {
 	}
 
 	@Override
-	public ResultMessage update(TaskPO po, String token) {
+	public ResultMessage update(TaskPO po, UserPO user) {
 		logger.trace("进入update方法");
     	ResultMessage rs = new ResultMessage();
 		try {
-			User user =(User) ((UsernamePasswordAuthenticationToken) jwtTokenUtils.getAuthentication(token)).getPrincipal();
-			UserPO userPo = userDao.getUserByAccount(user.getUsername());
+			if(!ObjectUtils.allNotNull(user)){
+				throw new IllegalArgumentException("登录用户不得为空！");
+			}
 			TaskPO lastPo =dao.getTaskById(po.getId());
 			lastPo.setName(po.getName());
 			lastPo.setType(po.getType());
@@ -157,7 +160,7 @@ public class TaskServiceImpl implements TaskService {
 			String content = null;
 			boolean isFinished = lastPo.getState() != po.getState();
 			if(isFinished) {
-				content = po.getState() == 1?"任务"+po.getName()+"被"+userPo.getName()+"完成":"任务"+po.getName()+"被重启";
+				content = po.getState() == 1?"任务"+po.getName()+"被"+user.getName()+"完成":"任务"+po.getName()+"被重启";
 				lastPo.setState(po.getState());
 			}
 			ReformPO reformPo = new ReformPO();

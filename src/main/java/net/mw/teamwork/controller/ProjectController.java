@@ -2,6 +2,8 @@ package net.mw.teamwork.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import net.mw.system.annotation.CurrentUser;
+import net.mw.system.pojo.po.UserPO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,11 +40,11 @@ public class ProjectController {
     
     
     @GetMapping(value = "/getList")
-    public ResultMessage getList(@RequestParam("page") int page,@RequestParam("size") int size
-    		,HttpServletRequest request){
+    public ResultMessage getList(@RequestParam("page") int page, @RequestParam("size") int size
+    		, @CurrentUser UserPO user){
 		logger.trace("进入getList方法");
 		PageRequest pageVo = new PageRequest(page, size);
-		ResultMessage rs=service.getList(pageVo, request.getHeader("Authorization").split("Bearer ")[1]);
+		ResultMessage rs=service.getList(pageVo, user);
 		logger.trace("退出getList方法");
 		return rs;
     }
@@ -57,19 +59,19 @@ public class ProjectController {
     }
     
     @PostMapping(value = "/add")
-    public ResultMessage add(@RequestBody ProjectVO vo,HttpServletRequest request){
+    public ResultMessage add(@RequestBody ProjectVO vo, @CurrentUser UserPO user){
 		logger.trace("进入add方法");
 		ProjectPO po = vo.voToPo(ProjectPO.class);
-		ResultMessage rs=service.add(po, request.getHeader("Authorization").split("Bearer ")[1]);
+		ResultMessage rs=service.add(po, user);
 		logger.trace("退出add方法");
 		return rs;
     }
     
     @PostMapping(value = "/update")
-    public ResultMessage update(@RequestBody ProjectVO vo,HttpServletRequest request){
+    public ResultMessage update(@RequestBody ProjectVO vo, @CurrentUser UserPO user){
 		logger.trace("进入add方法");
 		ProjectPO po = vo.voToPo(ProjectPO.class);
-		ResultMessage rs=service.update(po, request.getHeader("Authorization").split("Bearer ")[1]);
+		ResultMessage rs=service.update(po, user);
 		logger.trace("退出add方法");
 		return rs;
     }
@@ -85,9 +87,9 @@ public class ProjectController {
     }
     
     @PostMapping(value = "/join")
-    public ResultMessage join(@RequestBody ProjectVO vo,HttpServletRequest request){
+    public ResultMessage join(@RequestBody ProjectVO vo,@CurrentUser UserPO user){
 		logger.trace("进入join方法");
-		ResultMessage rs=service.join(vo.getCode(), request.getHeader("Authorization").split("Bearer ")[1]);
+		ResultMessage rs=service.join(vo.getCode(), user);
 		logger.trace("退出join方法");
 		return rs;
     }
