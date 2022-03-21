@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import net.mw.system.pojo.po.UserPO;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -59,15 +60,15 @@ public class ProjectServiceImpl implements ProjectService {
 	 * @see net.mw.teamwork.service.ProjectService#getList()
 	 */
 	@Override
-	public ResultMessage getList(PageRequest page, Boolean isAdmin, String token) {
+	public ResultMessage getList(PageRequest page, String token) {
 		logger.trace("进入getList方法");
     	ResultMessage rs = new ResultMessage();
 		try {
 			User user =(User) ((UsernamePasswordAuthenticationToken) jwtTokenUtils.getAuthentication(token)).getPrincipal();
-			Long userId = userDao.getUserByAccount(user.getUsername()).getId();
+			UserPO userPo = userDao.getUserByAccount(user.getUsername());
 			Map<String,Object> data = new HashMap<String,Object>();
 			PageHelper.startPage(page.getPageNumber(), page.getPageSize());
-			List<ProjectPO> projects = isAdmin?dao.getProjectList():dao.getProjectByUserId(userId);
+			List<ProjectPO> projects = userPo.getType() == 1?dao.getProjectList():dao.getProjectByUserId(userPo.getId());
 			List<ProjectVO> vos = new ArrayList<>();
 			projects.forEach((item)->{
 				item.setUserName(userDao.getUserById(item.getUserId()).getName());

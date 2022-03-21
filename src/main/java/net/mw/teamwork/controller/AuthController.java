@@ -2,6 +2,7 @@ package net.mw.teamwork.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,9 +46,16 @@ public class AuthController {
     @GetMapping(value = "/info")
     public ResultMessage info(HttpServletRequest request){
 		logger.trace("进入info方法");
+		ResultMessage rs;
 		String token = request.getHeader("Authorization").split("Bearer ")[1];
-		User user =(User) ((UsernamePasswordAuthenticationToken) jwtTokenUtils.getAuthentication(token)).getPrincipal();
-		ResultMessage rs=service.getById(userDao.getUserByAccount(user.getUsername()).getId());
+		if(StringUtils.isBlank(token)){
+			rs = new ResultMessage();
+			rs.setCode(403L);
+			rs.setMsg("未登录！");
+		}else{
+			User user =(User) ((UsernamePasswordAuthenticationToken) jwtTokenUtils.getAuthentication(token)).getPrincipal();
+			rs = service.getById(userDao.getUserByAccount(user.getUsername()).getId());
+		}
 		logger.trace("退出info方法");
 		return rs;
     }

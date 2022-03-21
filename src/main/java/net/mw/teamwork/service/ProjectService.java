@@ -8,7 +8,7 @@ import net.mw.teamwork.pojo.po.ProjectPO;
 public interface ProjectService {
 	
 	
-	public ResultMessage getList(PageRequest page, Boolean isAdmin, String token);
+	public ResultMessage getList(PageRequest page, String token);
 	
 	public ResultMessage getById(Long id);
 	

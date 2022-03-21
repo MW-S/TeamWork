@@ -57,15 +57,15 @@ public class TaskServiceImpl implements TaskService {
 	private ReformDao reformDao;
 	
 	@Override
-	public ResultMessage getList(PageRequest page, Boolean isAdmin, String token) {
+	public ResultMessage getList(PageRequest page, String token) {
 		logger.trace("进入getList方法");
     	ResultMessage rs = new ResultMessage();
 		try {
 			User user =(User) ((UsernamePasswordAuthenticationToken) jwtTokenUtils.getAuthentication(token)).getPrincipal();
-			Long userId = userDao.getUserByAccount(user.getUsername()).getId();
+			UserPO userPo = userDao.getUserByAccount(user.getUsername());
 			Map<String,Object> data = new HashMap<String,Object>();
 			PageHelper.startPage(page.getPageNumber(), page.getPageSize());
-			List<TaskPO> pos = isAdmin?dao.getTaskList():dao.getTaskByUserId(userId);
+			List<TaskPO> pos = userPo.getType()==1?dao.getTaskList():dao.getTaskByUserId(userPo.getId());
 			List<TaskVO> vos = new ArrayList<>();
 			pos.forEach((item)->{
 				item.setUserName(userDao.getUserById(item.getUserId()).getName());

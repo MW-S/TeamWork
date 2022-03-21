@@ -8,7 +8,7 @@ import net.mw.teamwork.pojo.po.TaskPO;
 public interface TaskService {
 
 	
-	public ResultMessage getList(PageRequest page, Boolean isAdmin, String token);
+	public ResultMessage getList(PageRequest page, String token);
 	
 	public ResultMessage getById(Long id);
 	

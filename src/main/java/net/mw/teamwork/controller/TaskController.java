@@ -39,11 +39,11 @@ public class TaskController {
     
     
     @GetMapping(value = "/getList")
-    public ResultMessage getList(@RequestParam("page") int page,@RequestParam("size") int size,
-    		@RequestParam("isAdmin") Boolean isAdmin ,HttpServletRequest request){
+    public ResultMessage getList(@RequestParam("page") int page,@RequestParam("size") int size
+			,HttpServletRequest request){
 		logger.trace("进入getList方法");
 		PageRequest pageVo = new PageRequest(page, size);
-		ResultMessage rs=service.getList(pageVo, isAdmin ,request.getHeader("Authorization").split("Bearer ")[1]);
+		ResultMessage rs=service.getList(pageVo, request.getHeader("Authorization").split("Bearer ")[1]);
 		logger.trace("退出getList方法");
 		return rs;
     }

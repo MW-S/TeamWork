@@ -1,0 +1,36 @@
+{
+  "groups": [
+    {
+      "name": "jwt",
+      "type": "net.mw.system.config.jwt.JwtSecurityProperties",
+      "sourceType": "net.mw.system.config.jwt.JwtSecurityProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jwt.base64-secret",
+      "type": "java.lang.String",
+      "description": "Base64对该令牌进行编码",
+      "sourceType": "net.mw.system.config.jwt.JwtSecurityProperties"
+    },
+    {
+      "name": "jwt.header",
+      "type": "java.lang.String",
+      "description": "Request Headers ： Authorization",
+      "sourceType": "net.mw.system.config.jwt.JwtSecurityProperties"
+    },
+    {
+      "name": "jwt.token-start-with",
+      "type": "java.lang.String",
+      "description": "令牌前缀，最后留个空格 Bearer",
+      "sourceType": "net.mw.system.config.jwt.JwtSecurityProperties"
+    },
+    {
+      "name": "jwt.token-validity-in-seconds",
+      "type": "java.lang.Long",
+      "description": "令牌过期时间 此处单位\/毫秒",
+      "sourceType": "net.mw.system.config.jwt.JwtSecurityProperties"
+    }
+  ],
+  "hints": []
+}

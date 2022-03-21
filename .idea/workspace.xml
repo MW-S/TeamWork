@@ -1,7 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99f5159d-39d1-4d75-8faf-a508e1118f19" name="默认更改列表" comment="" />
+    <list default="true" id="99f5159d-39d1-4d75-8faf-a508e1118f19" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Teamwork.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Teamwork1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Teamwork1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/数据库对象修改申请单整合202103102234.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/数据库对象修改申请单整合202103102234.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/mw/system/utils/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mw/system/utils/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/controller/ProjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/controller/ReformController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/controller/ReformController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/service/ProjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/service/impl/ProjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/service/impl/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/service/impl/TaskServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mw/teamwork/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Teamwork1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Teamwork1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/net.mw/Teamwork/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/net.mw/Teamwork/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/TeamWorkApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/TeamWorkApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/annotation/CurrentUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/annotation/CurrentUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/annotation/Perm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/annotation/Perm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/annotation/Power.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/annotation/Power.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/config/SecurityConfig$TokenConfigurer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/config/SecurityConfig$TokenConfigurer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/config/jwt/JwtAccessDeniedHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/config/jwt/JwtAccessDeniedHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/config/jwt/JwtAuthenticationEntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/config/jwt/JwtAuthenticationEntryPoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/config/jwt/JwtAuthenticationTokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/config/jwt/JwtAuthenticationTokenFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/config/jwt/JwtSecurityProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/config/jwt/JwtSecurityProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/constant/UserRoleConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/constant/UserRoleConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/constant/WxErrorCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/constant/WxErrorCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/dao/ActionPowerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/dao/ActionPowerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/dao/RoleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/dao/RoleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/dao/UserRoleMapDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/dao/UserRoleMapDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/init/ContextRefreshedListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/init/ContextRefreshedListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/init/CurrentUserMethodArgumentResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/init/CurrentUserMethodArgumentResolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/base/Base.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/base/Base.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/po/ActionPowerPO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/po/ActionPowerPO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/po/PermissionPO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/po/PermissionPO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/po/RolePO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/po/RolePO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/po/RolePermissionMapPO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/po/RolePermissionMapPO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/po/UserPO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/po/UserPO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/po/UserRoleMapPO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/po/UserRoleMapPO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/vo/AseVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/vo/AseVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/vo/UserVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/vo/UserVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/vo/WxAuthVO$ErrorCodeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/vo/WxAuthVO$ErrorCodeEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/vo/WxAuthVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/pojo/vo/WxAuthVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/result/ResultMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/result/ResultMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/result/ResultMessageAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/result/ResultMessageAdvice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/result/UnifiedResultCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/result/UnifiedResultCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/utils/Encrypt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/utils/Encrypt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/utils/ExtensibleMarkupLanguageFileHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/utils/ExtensibleMarkupLanguageFileHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/utils/JsonHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/utils/JsonHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/utils/JwtTokenUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/utils/JwtTokenUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/utils/NullConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/utils/NullConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/utils/NullHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/utils/NullHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/utils/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/utils/Registration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/system/utils/SpringContextHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/system/utils/SpringContextHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/controller/ProjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/controller/ProjectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/controller/ReformController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/controller/ReformController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/controller/TaskController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/controller/TaskController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/controller/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/controller/UploadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/dao/ProjectDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/dao/ProjectDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/dao/ReformDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/dao/ReformDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/dao/TaskDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/dao/TaskDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/pojo/po/ProjectPO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/pojo/po/ProjectPO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/pojo/po/ReformPO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/pojo/po/ReformPO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/pojo/po/TaskPO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/pojo/po/TaskPO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/pojo/vo/ProjectVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/pojo/vo/ProjectVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/pojo/vo/ReformVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/pojo/vo/ReformVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/pojo/vo/TaskVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/pojo/vo/TaskVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/ProjectService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/ProjectService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/ReformService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/ReformService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/TaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/TaskService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/impl/ProjectServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/impl/ProjectServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/impl/ReformServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/impl/ReformServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/impl/TaskServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/impl/TaskServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/mw/teamwork/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/security/web/firewall/FirewalledResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/security/web/firewall/FirewalledResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/security/web/firewall/StrictHttpFirewall$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/security/web/firewall/StrictHttpFirewall$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/security/web/firewall/StrictHttpFirewall.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/security/web/firewall/StrictHttpFirewall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/dao/UserDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dao/UserDaoTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +114,18 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ubuntu" type="feb32156:DbDataSourceImpl" />
+        <item name="team_work@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="team_work@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="team_work@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="team_work: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -36,6 +140,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -58,20 +165,24 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mariadb" />
+    <property name="DatabaseDriversLRU" value="mariadb&#10;mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/JAVA_Eclipse/Eclipse/eclipse_new/eclipse_Workspace/ncov" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.4329897" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="spring.boot" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -129,6 +240,18 @@
       <workItem from="1614699833961" duration="2857000" />
       <workItem from="1614748668828" duration="4425000" />
       <workItem from="1614763195649" duration="7212000" />
+      <workItem from="1635305586645" duration="366000" />
+      <workItem from="1635306092644" duration="141000" />
+      <workItem from="1635790804045" duration="97000" />
+      <workItem from="1635819995156" duration="367000" />
+      <workItem from="1635820413453" duration="2418000" />
+      <workItem from="1635825502326" duration="7515000" />
+      <workItem from="1635847809556" duration="5788000" />
+      <workItem from="1635919667876" duration="1956000" />
+      <workItem from="1636023537135" duration="4611000" />
+      <workItem from="1636091939333" duration="17000" />
+      <workItem from="1638119060830" duration="152000" />
+      <workItem from="1647850006149" duration="10271000" />
     </task>
     <servers />
   </component>
@@ -136,89 +259,81 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="24" key="#Inspections" timestamp="1614672583301">
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1647854683257">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="24" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1614672583301" />
-    <state x="275" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614673618098">
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1647854683257" />
+    <state width="356" height="466" key="DebuggerActiveHint" timestamp="1647857475233">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1614673618098" />
-    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1614767937661">
+    <state width="356" height="466" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1647857475233" />
+    <state width="1323" height="233" key="GridCell.Tab.0.bottom" timestamp="1647871214626">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1614767937661" />
-    <state x="305" y="44" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1614671020140">
+    <state width="1323" height="233" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1647871214626" />
+    <state width="1323" height="233" key="GridCell.Tab.0.center" timestamp="1647871214626">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="305" y="44" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1366.728@0.0.1366.728" timestamp="1614671020140" />
-    <state x="288" y="291" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1614669083983">
+    <state width="1323" height="233" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1647871214626" />
+    <state width="1323" height="233" key="GridCell.Tab.0.left" timestamp="1647871214626">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="288" y="291" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1614669083983" />
-    <state x="509" y="229" width="380" height="275" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1614690139390">
+    <state width="1323" height="233" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1647871214626" />
+    <state width="1323" height="233" key="GridCell.Tab.0.right" timestamp="1647871214626">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="509" y="229" width="380" height="275" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1614690139390" />
-    <state x="275" y="24" key="#项目结构" timestamp="1614671148750">
+    <state width="1323" height="233" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1647871214626" />
+    <state width="1323" height="233" key="GridCell.Tab.1.bottom" timestamp="1647871214626">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="24" key="#项目结构/0.0.1366.728@0.0.1366.728" timestamp="1614671148750" />
-    <state x="445" y="232" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1614672921228">
+    <state width="1323" height="233" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1647871214626" />
+    <state width="1323" height="233" key="GridCell.Tab.1.center" timestamp="1647871214626">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="445" y="232" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1614672921228" />
-    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1614760960222">
+    <state width="1323" height="233" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1647871214626" />
+    <state width="1323" height="233" key="GridCell.Tab.1.left" timestamp="1647871214626">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1614760960222" />
-    <state width="1322" height="68" key="GridCell.Tab.0.bottom" timestamp="1614779316584">
+    <state width="1323" height="233" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1647871214626" />
+    <state width="1323" height="233" key="GridCell.Tab.1.right" timestamp="1647871214626">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="68" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
-    <state width="1322" height="68" key="GridCell.Tab.0.center" timestamp="1614779316584">
+    <state width="1323" height="233" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1647871214626" />
+    <state width="1323" height="233" key="GridCell.Tab.2.bottom" timestamp="1647871214626">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="68" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
-    <state width="1322" height="68" key="GridCell.Tab.0.left" timestamp="1614779316584">
+    <state width="1323" height="233" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1647871214626" />
+    <state width="1323" height="233" key="GridCell.Tab.2.center" timestamp="1647871214626">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="68" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
-    <state width="1322" height="68" key="GridCell.Tab.0.right" timestamp="1614779316584">
+    <state width="1323" height="233" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1647871214626" />
+    <state width="1323" height="233" key="GridCell.Tab.2.left" timestamp="1647871214626">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="68" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
-    <state width="1322" height="68" key="GridCell.Tab.1.bottom" timestamp="1614779316584">
+    <state width="1323" height="233" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1647871214626" />
+    <state width="1323" height="233" key="GridCell.Tab.2.right" timestamp="1647871214626">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="68" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
-    <state width="1322" height="68" key="GridCell.Tab.1.center" timestamp="1614779316584">
+    <state width="1323" height="233" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1647871214626" />
+    <state x="263" y="19" key="com.intellij.database.dbimport.ImportDialog" timestamp="1647870114847">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="68" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
-    <state width="1322" height="68" key="GridCell.Tab.1.left" timestamp="1614779316584">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1322" height="68" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
-    <state width="1322" height="68" key="GridCell.Tab.1.right" timestamp="1614779316584">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1322" height="68" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1614779316584" />
-    <state width="220" height="477" key="HiddenNamespacesPopup" timestamp="1614670190596">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1614670190596" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1614766126571">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1614766126571" />
-    <state x="393" y="190" key="com.intellij.ide.util.TipDialog" timestamp="1614763207399">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="393" y="190" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1614763207399" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1614702013967">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1614702013967" />
+    <state x="263" y="19" key="com.intellij.database.dbimport.ImportDialog/0.0.1366.728@0.0.1366.728" timestamp="1647870114847" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/net/mw/teamwork/service/impl/UserServiceImpl.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/net/mw/TeamWorkApplication.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

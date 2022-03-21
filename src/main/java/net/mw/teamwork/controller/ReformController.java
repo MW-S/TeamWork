@@ -42,7 +42,7 @@ public class ReformController {
 	
     @GetMapping(value = "/getList")
     public ResultMessage getList(@RequestParam("page") int page,@RequestParam("size") int size,
-    		@RequestParam("isAdmin") Boolean isAdmin ,HttpServletRequest request){
+    		HttpServletRequest request){
 		logger.trace("进入getList方法");
 		PageRequest pageVo = new PageRequest(page, size);
 		ResultMessage rs=service.getList(pageVo);

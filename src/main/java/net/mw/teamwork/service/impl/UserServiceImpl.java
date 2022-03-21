@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import net.mw.teamwork.pojo.vo.UserRoleVO;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
@@ -243,9 +244,18 @@ public class UserServiceImpl implements UserService {
 		try {
 			Map<String,Object> data = new HashMap<String,Object>();
 			UserPO resPo = dao.getUserById(id);
+			List<RolePO> roles = roleDao.getRoleByUserName(resPo.getUserName());
+			List<String> roleVos = new ArrayList<String>();
+//			UserRoleVO userVo = new UserRoleVO();
+//			userVo.poToVo(resPo);
+			roles.forEach(item->{
+				roleVos.add(item.getName());
+			});
+//			userVo.setRoles(roleVos);
 			UserVO resVo = new UserVO();
 			resVo.poToVo(resPo);
 			data.put("data",resVo);
+			data.put("roles", roleVos);
 			rs.setData(data);
 			rs.setCode(1L);
 			rs.setMsg("获取成功!");

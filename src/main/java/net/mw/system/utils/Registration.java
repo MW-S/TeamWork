@@ -1,8 +1,6 @@
-﻿package net.mw.system.utils;
-
+package net.mw.system.utils;
 import java.security.SecureRandom;
 import java.util.Map;
-
 import com.aliyuncs.CommonRequest;
 import com.aliyuncs.CommonResponse;
 import com.aliyuncs.DefaultAcsClient;

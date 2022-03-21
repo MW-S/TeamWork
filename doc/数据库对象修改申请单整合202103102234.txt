@@ -1,3 +1,4 @@
+set autocommit=0;
 drop database if exists team_work;
 create database team_work charset utf8 collate utf8_general_ci;
 use team_work;
@@ -195,3 +196,6 @@ ALTER TABLE `task`
 
 ALTER TABLE `user`
 	CHANGE COLUMN `state` `state` TINYINT(1) NOT NULL DEFAULT '1' COMMENT '账号状态 1是正常 0是禁用' AFTER `salt`;
+
+commit;
+set autocommit=1;

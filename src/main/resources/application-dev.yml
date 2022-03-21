@@ -5,7 +5,8 @@ spring:
    profiles: dev
 #   上传文件总的最大值
    servlet:
-     multipart:
+      connectionTimeout: 180000
+      multipart:
         max-request-size: 100MB
         max-file-size: 100MB
    redis:
@@ -21,7 +22,7 @@ spring:
 #开启热部署
    datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://192.168.31.110:3306/team_work?serverTimezone=GMT%2B8&useSSL=false
+      url: jdbc:mysql://127.0.0.1:3306/team_work?serverTimezone=GMT%2B8&useSSL=false
       username: team
       password: team
 # 配置数据源
